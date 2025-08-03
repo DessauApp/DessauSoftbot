@@ -47,7 +47,7 @@ def send_message_to_llm(session_id, message):
 def main():
     # --- MODIFICACIÓN PARA FAVICON LOCAL ---
     try:
-        favicon = Image.open(r"assets\LogoTra.png")
+        favicon = Image.open("assets/LogoTra.png")
     except FileNotFoundError:
         # Si no se encuentra el archivo, usa un emoji por defecto
         favicon = "🤖" 
@@ -64,7 +64,7 @@ def main():
     st.subheader("Asistente para la generación de informes demográficos del Perú")
 
     # --- RUTA DEL AVATAR ---
-    bot_avatar_path = r"assets\LogoTra.png"
+    bot_avatar_path = "assets/LogoTra.png"
 
     if "messages" not in st.session_state:
         st.session_state.messages = [{
